@@ -13,6 +13,7 @@ public class Rendezvous {
     private Long id;
     private String date;
     private String heure;
+    @Enumerated(EnumType.STRING)
     private StatusRDV status;
     @ManyToOne
     private Patient patient;
