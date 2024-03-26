@@ -1,5 +1,6 @@
 package ma.emsi.jpahospital.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,6 +17,7 @@ public class Consultation {
     private String diagnostic;
     private String traitement;
     @OneToOne
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Rendezvous rendezvous;
 
     public void setId(Long id) {
